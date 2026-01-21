@@ -4,7 +4,10 @@ const convertToCelsius = function(temperature) {
   return parseFloat(tempCelsius.toFixed(1));
 };
 
-const convertToFahrenheit = function() {
+const convertToFahrenheit = function(temperature) {
+  if(typeof temperature !== "number") return "ERROR";
+  const tempFahrenheit = temperature * 9 / 5 + 32;
+  return parseFloat(tempFahrenheit.toFixed(1));
 };
 
 // Do not edit below this line
